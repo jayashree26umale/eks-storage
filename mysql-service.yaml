@@ -8,6 +8,6 @@ spec:
   ports:
   - port: 3306
   selector:
-    name: cloud7-employeeapp-database-deployment
+    name: mysql-pod
   type: ClusterIP
 
