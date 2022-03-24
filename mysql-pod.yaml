@@ -24,11 +24,11 @@ spec:
       containerPort: 3306
       protocol: TCP
 
-  #   volumeMounts:
-  #       - name: mysql-persistent-storage
-  #         mountPath: "/var/lib/mysql"
+    volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: "/var/lib/mysql"
 
-  # volumes:
-  #     - name: mysql-persistent-storage
-  #       persistentVolumeClaim:
-  #         claimName: employee-app
+  volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: ebs-claim
